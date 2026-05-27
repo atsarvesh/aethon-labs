@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aethon Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Manrope"', '"Inter"', 'sans-serif'],
+            },
+            colors: {
+              wizard: {
+                green: '#FF8A1F',
+                dark: '#090A0F',
+                gray: '#F4EEE6',
+              }
+            },
+            boxShadow: {
+              'neobrutal': '0px 10px 30px rgba(0, 0, 0, 0.35)',
+              'neobrutal-hover': '0px 0px 0px 0px #090A0F',
+              'neobrutal-sm': '0px 6px 18px rgba(0, 0, 0, 0.28)',
+            },
+            animation: {
+              'marquee': 'marquee 30s linear infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'spin-slow': 'spin 12s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+        background:
+          radial-gradient(circle at 18% 14%, rgba(255, 138, 31, 0.18), transparent 24%),
+          radial-gradient(circle at 82% 18%, rgba(255, 186, 118, 0.1), transparent 22%),
+          linear-gradient(180deg, #07080d 0%, #0d0f16 100%);
+        color: #F7F2EA;
+      }
+      /* Hide scrollbar for clean look in some elements */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
